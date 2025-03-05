@@ -34,7 +34,8 @@ RUN pip install apache-beam[interactive]==2.45.0
 RUN pip install jupyter==1.0.0 -U && pip install jupyterlab==3.6.1
 EXPOSE 8888
 ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root"]
-Para construir la imagen, ejecuta:
+
+**Para construir la imagen, ejecuta:**
 
 bash
 docker build -t imagen_proyecto1 .
@@ -61,7 +62,8 @@ Detalles:
 -p 8888:8888: Mapea el puerto 8888 del contenedor al mismo puerto en tu máquina
 -v "ruta_local":/work: Monta el directorio del proyecto en /work dentro del contenedor
 --name contenedor_proyecto1: Asigna un nombre al contenedor
-Para acceder a Jupyter Lab, revisa los logs del contenedor para obtener el URL y token. Por ejemplo:
+
+**Para acceder a Jupyter Lab, revisa los logs del contenedor para obtener el URL y token.** Por ejemplo:
 
 bash
 docker logs contenedor_proyecto1
@@ -114,22 +116,22 @@ Asegúrate de que todas las dependencias se instalen correctamente durante la co
 **📋 Requisitos del Taller**
 Este proyecto cumple con todos los puntos especificados en el taller:
 
-Ingesta y transformación de datos:
+- Ingesta y transformación de datos:
 Con ExampleGen, StatisticsGen, SchemaGen, y Transform.
 
-Curado y validación del esquema:
+- Curado y validación del esquema:
 Se ajustan rangos (ej. Hillshade 9am: 0–255, Slope: 0–90) y se definen entornos TRAINING y SERVING.
 
-Ingeniería de características:
+- Ingeniería de características:
 Se aplica preprocesamiento consistente en entrenamiento e inferencia.
 
-Registro y seguimiento de metadatos:
+- Registro y seguimiento de metadatos:
 Se exploran los artefactos y se rastrea la procedencia usando ML Metadata.
 
-Entorno reproducible:
+- Entorno reproducible:
 Se utiliza Docker para crear un ambiente aislado y versionado.
 
-Versionamiento:
+**Versionamiento:**
 El código está versionado en GitHub: [Proyecto1](https://github.com/zafrar0926/Proyecto1)
 
 **📝 Notas Adicionales**
