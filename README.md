@@ -85,21 +85,21 @@ El subconjunto resultante se guarda en
 Se divide el dataset, se estandariza y se entrena un modelo Random Forest para obtener una métrica de precisión.
 
 3. Data Pipeline con TFX
-**Conexión a Metadata:**
-Se configura una base de datos SQLite en /work/notebooks/ml_metadata.sqlite para almacenar artefactos.
+    **Conexión a Metadata:**
+    Se configura una base de datos SQLite en /work/notebooks/ml_metadata.sqlite para almacenar artefactos.
 
-**Ingesta con ExampleGen:**
-Se convierte el CSV en TFRecords.
+    **Ingesta con ExampleGen:**
+    Se convierte el CSV en TFRecords.
 
-**Estadísticas y Esquema:**
-Se calculan estadísticas con StatisticsGen y se infiere un esquema con SchemaGen.
-Luego se "cura" el esquema (ajustando rangos y definiendo entornos TRAINING y SERVING).
+    **Estadísticas y Esquema:**
+    Se calculan estadísticas con StatisticsGen y se infiere un esquema con SchemaGen.
+    Luego se "cura" el esquema (ajustando rangos y definiendo entornos TRAINING y SERVING).
 
-**Validación de Inferencia:**
-Se simula un dataset de servicio (sin la columna Cover_Type) y se valida con ExampleValidator.
+    **Validación de Inferencia:**
+    Se simula un dataset de servicio (sin la columna Cover_Type) y se valida con ExampleValidator.
 
-**Transformación (Ingeniería de Características):**
-Se aplica una función de preprocesamiento (definida en modules/preprocessing.py) mediante el componente Transform.
+    **Transformación (Ingeniería de Características):**
+    Se aplica una función de preprocesamiento (definida en modules/preprocessing.py) mediante el componente Transform.
 
 4. Exploración y Consulta de ML Metadata
 Se registran y consultan artefactos (Examples, ExampleStatistics, Schema, etc.) para rastrear la procedencia y validación de los datos.
