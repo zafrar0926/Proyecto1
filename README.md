@@ -14,7 +14,7 @@ Registro y consulta de ML Metadata para rastrear la procedencia de los artefacto
 
 Para descargar el proyecto desde GitHub, ejecuta el siguiente comando en la terminal:
 
-```bash
+```bashgi
 git clone https://github.com/zafrar0926/Proyecto1.git
 ```
 
@@ -120,21 +120,21 @@ Se divide el dataset, se estandariza y se entrena un modelo Random Forest para o
 
 *** 3.3 Data Pipeline con TFX ***
 
-    **Conexión a Metadata:**
-    Se configura una base de datos SQLite en /work/notebooks/ml_metadata.sqlite para almacenar artefactos.
+**Conexión a Metadata:**
+Se configura una base de datos SQLite en /work/notebooks/ml_metadata.sqlite para almacenar artefactos.
 
-    **Ingesta con ExampleGen:**
-    Se convierte el CSV en TFRecords.
+**Ingesta con ExampleGen:**
+Se convierte el CSV en TFRecords.
 
-    **Estadísticas y Esquema:**
-    Se calculan estadísticas con StatisticsGen y se infiere un esquema con SchemaGen.
-    Luego se "cura" el esquema (ajustando rangos y definiendo entornos TRAINING y SERVING).
+**Estadísticas y Esquema:**
+Se calculan estadísticas con StatisticsGen y se infiere un esquema con SchemaGen.
+Luego se "cura" el esquema (ajustando rangos y definiendo entornos TRAINING y SERVING).
 
-    **Validación de Inferencia:**
-    Se simula un dataset de servicio (sin la columna Cover_Type) y se valida con ExampleValidator.
+**Validación de Inferencia:**
+Se simula un dataset de servicio (sin la columna Cover_Type) y se valida con ExampleValidator.
 
-    **Transformación (Ingeniería de Características):**
-    Se aplica una función de preprocesamiento (definida en modules/preprocessing.py) mediante el componente Transform.
+**Transformación (Ingeniería de Características):**
+Se aplica una función de preprocesamiento (definida en modules/preprocessing.py) mediante el componente Transform.
 
 *** 3.4. Exploración y Consulta de ML Metadata ***
 
