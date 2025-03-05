@@ -9,9 +9,17 @@ Registro y consulta de ML Metadata para rastrear la procedencia de los artefacto
 📥 Descarga del Repositorio
 Para descargar el proyecto desde GitHub, ejecuta el siguiente comando en la terminal:
 
+```bash
 git clone https://github.com/zafrar0926/Proyecto1.git
+```
+
 
 Luego, navega al directorio clonado:
+
+```bash
+cd Proyecto_1
+```
+
 
 cd Proyecto1
 **🐳 Entorno de Ejecución con Docker**
@@ -37,24 +45,32 @@ ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root"]
 
 **Para construir la imagen, ejecuta:**
 
-bash
+```bash
 docker build -t imagen_proyecto1 .
+```
 
 ###  2. Levantar el Contenedor
 
 Ejecuta el siguiente comando para levantar el contenedor:
 
 **En Linux/Mac:**
-bash
+```bash
 docker run -d -p 8888:8888 -v $(pwd)/Desarrollo:/work --name contenedor_proyecto1 imagen_proyecto1
+```
 
 **En Windows (PowerShell):**
+
+```
 powershell
 docker run -d -p 8888:8888 -v ${PWD}\Desarrollo:/work --name contenedor_proyecto1 imagen_proyecto1
+```
 
 **En Windows (CMD):**
+
+```
 cmd
 docker run -d -p 8888:8888 -v %cd%\Desarrollo:/work --name contenedor_proyecto1 imagen_proyecto1
+```
 
 Detalles:
 
@@ -65,8 +81,9 @@ Detalles:
 
 **Para acceder a Jupyter Lab, revisa los logs del contenedor para obtener el URL y token.** Por ejemplo:
 
-bash
+```bash
 docker logs contenedor_proyecto1
+```
 
 Abre el URL que aparezca (por ejemplo, http://<IP_MV>:8888/?token=...) en tu navegador.
 
