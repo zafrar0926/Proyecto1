@@ -1,0 +1,9 @@
+version: '3'
+services:
+  proyecto1:
+    image: imagen_proyecto1
+    container_name: contenedor_proyecto1
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/work

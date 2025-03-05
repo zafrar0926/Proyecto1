@@ -1,7 +1,7 @@
 ## 🚀 Proyecto MLOps – Canalización de Datos y ML Metadata
-## 🚀 Edwin A. Caro (EDCAJI)
-## 🚀Andres F. Matallana (ANDRESMLZ)
-## 🚀Santiago Zafra Rodríguez (ZAFRAR0926)
+#### Edwin A. Caro (EDCAJI)
+#### Andres F. Matallana (ANDRESMLZ)
+#### Santiago Zafra Rodríguez (ZAFRAR0926)
 
 ¡Bienvenido al proyecto! Este repositorio demuestra cómo construir un ambiente de desarrollo MLOps usando TFX, Docker y Jupyter Lab. Aquí se muestran todas las etapas:
 
@@ -14,7 +14,7 @@ Registro y consulta de ML Metadata para rastrear la procedencia de los artefacto
 
 Para descargar el proyecto desde GitHub, ejecuta el siguiente comando en la terminal:
 
-```bashgi
+```bash
 git clone https://github.com/zafrar0926/Proyecto1.git
 ```
 
@@ -100,6 +100,16 @@ docker logs contenedor_proyecto1
 ```
 
 Abre el URL que aparezca (por ejemplo, http://<IP_MV>:8888/?token=...) en tu navegador.
+
+###  🐋 2.4. Uso de Docker Compose
+En lugar de ejecutar manualmente los comandos de Docker, puedes utilizar docker-compose para gestionar los contenedores de manera más sencilla.
+
+***⚙️ Archivo docker-compose.yml***
+Para iniciar el contenedor utilizando docker-compose, ejecuta:
+
+```bash
+docker-compose up -d
+```
 
 ### 📓 3. Ejecución del Pipeline (Desarrollo.ipynb)
 
